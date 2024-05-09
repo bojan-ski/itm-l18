@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;    
+}
+
+body {   
+  height: 100vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: steelblue;
+  width: 700px;
+  height: 700px;
+  border-radius: 10px; 
+}
+ 
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------ LOGIN ------------ */
+.login-form{
+  text-align: center;
+}
+
+.login-form input, 
+.tasks .task-form input {
+  display: block;
+  height: 40px;
+  width: 300px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.login-form input:focus{
+  outline: none;
+}
+
+.login-form button {
+  background-color: #390846;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+
+.login-form button:active,
+.user-details .logout-btn:active, 
+.tasks .task-form button:active, 
+.tasks .tasks-list button:active{
+  transform: scale(0.95);
+}
+
+/* ------------ USER DETAILS ------------ */
+.user-details{
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-details p{
+  color: #fff;
+  font-weight: 900;
+}
+
+.user-details .logout-btn{
+  background-color: #390846;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+/* ------------ TASKS ------------ */
+.tasks{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------ add new task ------------ */
+.tasks .task-form input{
+  display: inline-block;
+}
+
+.tasks .task-form .task-form-select{
+  padding: 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.tasks .task-form button{
+  display: block;
+  margin: auto;
+  background-color: #13ad87;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+
+/* ------------ list of tasks ------------ */
+.tasks .tasks-list{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tasks .tasks-list .task{
+  background-color: #b4f847;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.tasks .tasks-list .task p{
+  margin: 5px 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.tasks .tasks-list button{
+  background-color: #790d2d;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+} 
+
+/* ------------ edit task ------------ */
+.tasks .tasks-list .task .edit-task{
+  margin: 10px 0;
+}
+
+.tasks .tasks-list .task .edit-task input{
+  height: 30px;
+  width: 40%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;  
+}
+
+.tasks .tasks-list .task select{
+  padding: 5px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+}
