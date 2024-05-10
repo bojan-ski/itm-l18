@@ -26,8 +26,9 @@ const AddTask = () => {
             const id = crypto.randomUUID()
             const taskTitle = data.taskTitle.trim()
             const taskCategory = data.taskCategory
+            const taskComments = []
 
-            listOfTasks(currListOfTasks => [...currListOfTasks, { id, taskTitle, taskCategory }]);
+            listOfTasks(currListOfTasks => [...currListOfTasks, { id, taskTitle, taskCategory, taskComments }]);
         }
     }
 

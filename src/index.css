@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #333;
 }
 
 .container{
@@ -168,4 +169,9 @@ body {
   margin-left: 5px;
   border: none;
   border-radius: 5px;
+}
+
+/* ------------ task comments ------------ */
+.comments-form{
+  margin: 20px 0;
 }

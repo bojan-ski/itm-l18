@@ -8,7 +8,6 @@ const UserData = () => {
         <>
             {userData.loggedIn && <p>Hello {userData.username}</p>}
         </>
-
     )
 }
 
