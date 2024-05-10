@@ -11,7 +11,7 @@ const AddTaskComment = ({ id, postTaskComment }) => {
         <form className='comments-form' onSubmit={handleSubmit(commentSubmit)}>
             <input {...register('comment')} type="text" placeholder='enter comment' />
             <input {...register('taskID')} type="hidden" defaultValue={id} />
-            <button type='submit'>
+            <button type='submit' className='btn-post-comment'>
                 Post comment
             </button>
         </form>

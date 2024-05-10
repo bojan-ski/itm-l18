@@ -7,35 +7,32 @@
 }
 
 body {   
-  height: 100vh;  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #eee;
 }
 
 .container{
   background-color: steelblue;
-  width: 700px;
-  height: 700px;
-  border-radius: 10px; 
-}
- 
-.container{
+  width: 1200px;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 /* ------------ LOGIN ------------ */
 .login-form{
+  margin-top: 40vh;
   text-align: center;
 }
 
 .login-form input, 
-.tasks .task-form input {
+.tasks .task-form input,
+.comments-form input {
   display: block;
   height: 40px;
   width: 300px;
@@ -68,13 +65,21 @@ body {
 /* ------------ USER DETAILS ------------ */
 .user-details{
   display: flex;
-  width: 50%;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  
+  margin: 10px 0 50px;
 }
 
-.user-details p{
+.user{
+  width: 700px;
+  display: none;
+}
+
+.user.show{
+  display: block;
+}
+
+.user-details .user p{
   color: #fff;
   font-weight: 900;
 }
@@ -128,28 +133,42 @@ body {
   gap: 10px;
 }
 
-.tasks .tasks-list .task{
-  background-color: #b4f847;
+/* ------------ task ------------ */
+.task{
+  background-color: #eee;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
 }
 
-.tasks .tasks-list .task p{
-  margin: 5px 10px;
-  font-size: 20px;
+.task p{
+  margin: 5px 0 15px;
+  font-size: 25px;
   text-transform: capitalize;
 }
 
-.tasks .tasks-list button{
-  background-color: #790d2d;
+.task button{
   color: #fff;
   font-weight: 700;
   margin: 0 10px;
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
+  margin-bottom: 15px;
 } 
+
+.task .btn-edit{
+  background-color: gold;
+}
+
+.task .btn-delete{
+  background-color: crimson;
+}
+
+.task .task-details{
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
 
 /* ------------ edit task ------------ */
 .tasks .tasks-list .task .edit-task{
@@ -172,6 +191,21 @@ body {
 }
 
 /* ------------ task comments ------------ */
-.comments-form{
-  margin: 20px 0;
+.post-comment{
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.post-comment h2{
+  margin-bottom: 10px;
+}
+
+.comments-form .btn-post-comment{
+  background-color: #1368ad;
+  margin-bottom: 15px;
+}
+
+
+.comments h2{
+  margin-bottom: 10px;
 }

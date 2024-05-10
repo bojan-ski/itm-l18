@@ -42,36 +42,39 @@ const SingleTask = ({ task, handleEditTask, handleDeleteTask }) => {
     return (
         <>
             <section className="task-details">
+                <h2>Task details:</h2>
                 <p>{taskTitle}</p>
                 <p>{taskCategory}</p>
 
-                <button type='button' onClick={() => handleEditTask(task)}>
+                <button type='button' className='btn-edit' onClick={() => handleEditTask(task)}>
                     Edit
                 </button>
 
-                <button type='button' onClick={() => handleDeleteTask(id)}>
+                <button type='button' className='btn-delete' onClick={() => handleDeleteTask(id)}>
                     Delete
                 </button>
             </section>
 
             <section className='post-comment'>
+                <h2>Add a comment:</h2>
                 <AddTaskComment id={id} postTaskComment={postTaskComment} />
             </section>
 
-            <section className='comments'>
-                {taskComments ? (
-                    taskComments.map((comment, idx) => {
+            {taskComments.length > 0 ? (
+                <section className='comments'>
+                    <h2>Task comments:</h2>
+                    {taskComments.map((comment, idx) => {
                         return <div key={idx}>
                             <p>
                                 {comment}
                             </p>
-                            <button type='button' onClick={() => deleteTaskComment(comment, id)}>
+                            <button type='button' className='btn-delete' onClick={() => deleteTaskComment(comment, id)}>
                                 Delete Comment
                             </button>
                         </div>
-                    })
-                ) : ('')}
-            </section>
+                    })}
+                </section>
+            ) : ('')}
         </>
     )
 }
